@@ -1,0 +1,139 @@
+unit Unit30;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ComCtrls, Buttons, unit2;
+
+type
+  TForm30_logistic = class(TForm)
+    StaticText1: TStaticText;
+    StaticText2: TStaticText;
+    StaticText3: TStaticText;
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    SpeedButton3: TSpeedButton;
+    ListView1: TListView;
+    ListView2: TListView;
+    ListView3: TListView;
+    StaticText4: TStaticText;
+    StaticText5: TStaticText;
+    StaticText6: TStaticText;
+    procedure FormActivate(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
+    procedure SpeedButton2Click(Sender: TObject);
+    procedure SpeedButton3Click(Sender: TObject);
+    procedure FormDeactivate(Sender: TObject);
+    procedure ListView1DblClick(Sender: TObject);
+    procedure ListView2DblClick(Sender: TObject);
+    procedure ListView3DblClick(Sender: TObject);
+  private
+       Count:integer;
+    { Private declarations }
+  public
+    { Public declarations }
+     SQL_Disp,SQL_avto,SQL_driver:TStringList;
+     AvtoId,DispetcherId,AvtoDriverId,ZakazID:integer;
+     NewAvtoId,NewDispetcherId,NewAvtoDriverId:integer;
+     Status:TStatus;
+  end;
+
+var
+  Form30_logistic: TForm30_logistic;
+
+implementation
+
+
+{$R *.dfm}
+
+procedure TForm30_logistic.FormActivate(Sender: TObject);
+begin
+ ListView1.Top:= SpeedButton1.Top;
+ ListView2.Top:= SpeedButton2.Top;
+ ListView3.Top:= SpeedButton3.Top;
+ ListView1.Left:=SpeedButton1.Left+SpeedButton1.Width+3;
+ ListView2.Left:=SpeedButton2.Left+SpeedButton2.Width+3;
+ ListView3.Left:=SpeedButton3.Left+SpeedButton3.Width+3;
+
+ SQL_Disp:=TStringList.Create;
+ SQL_Disp.Clear;
+ SQL_Disp.Add('SELECT d.name_disp as "ФИО диспетчера", d.tel_disp as "Контактный телефон",d.dispetcher_id FROM Dispetcher d');
+ dm.DBListView(ListView1,SQL_Disp,dm.ZConnection2,1);
+
+ SQL_avto:=TStringList.Create;
+ SQL_avto.Clear;
+ SQL_avto.Add(' SELECT a.avto_number AS "Номер автомобиля", a.mark_avto AS "Модель", a.tonag AS "Тонаж", a.peregruz AS "Перегруз", ao.name_owner AS "ФИО владельца", ao.tel_owner AS "Телефон владельца", a.avto_id, a.avto_owner_id');
+ SQL_avto.Add(' FROM  avto a left JOIN avto_owner ao ON a.avto_owner_id = ao.avto_owner_id');
+ dm.DBListView(ListView2,SQL_avto,dm.ZConnection2,2);
+
+ SQL_driver:=TStringList.Create;
+ SQL_driver.Clear;
+ SQL_driver.Add( 'SELECT ad.name_driver AS "ФИО водителя", ad.tel_driver AS "Телефон водителя", ad.address AS "Адрес водителя", ad.avto_driver_id FROM avto_driver ad');
+ dm.DBListView(ListView3,SQL_driver,dm.ZConnection2,1);
+
+ NewAvtoId:=-1;
+ NewDispetcherId:=-1;
+ NewAvtoDriverId:=-1;
+
+end;
+
+procedure TForm30_logistic.SpeedButton1Click(Sender: TObject);
+begin
+  ListView1.Visible:= not ListView1.Visible;
+  ListView2.Visible:=false;
+  ListView3.Visible:=false;
+end;
+
+procedure TForm30_logistic.SpeedButton2Click(Sender: TObject);
+begin
+  ListView1.Visible:=false;
+  ListView2.Visible:= not ListView2.Visible;
+  ListView3.Visible:=false;
+end;
+
+procedure TForm30_logistic.SpeedButton3Click(Sender: TObject);
+begin
+  ListView1.Visible:=false;
+  ListView2.Visible:=false;
+  ListView3.Visible:= not ListView3.Visible;
+end;
+
+procedure TForm30_logistic.FormDeactivate(Sender: TObject);
+begin
+  SQL_Disp.Free;
+  SQL_avto.Free;
+  SQL_driver.Free;
+end;
+
+procedure TForm30_logistic.ListView1DblClick(Sender: TObject);
+begin
+   if not(ListView1.Selected=nil) then begin
+    count:=ListView1.Selected.SubItems.Count;
+    NewDispetcherId:=StrToInt(ListView1.Selected.SubItems.Strings[count-1]);
+    StaticText4.Caption:=ListView1.Selected.Caption+', '+ListView1.Selected.SubItems.Strings[0]+'  ';
+    ListView1.Visible:=false;
+ end;//if
+end;
+
+procedure TForm30_logistic.ListView2DblClick(Sender: TObject);
+begin
+ if not(ListView2.Selected=nil) then begin
+    count:=ListView2.Selected.SubItems.Count;
+    NewAvtoId:=StrToInt(ListView2.Selected.SubItems.Strings[count-1]);
+    StaticText5.Caption:=ListView2.Selected.Caption+', '+ListView2.Selected.SubItems.Strings[0]+'  ';
+    ListView2.Visible:=false;
+ end;//if
+end;
+
+procedure TForm30_logistic.ListView3DblClick(Sender: TObject);
+begin
+   if not(ListView3.Selected=nil) then begin
+      count:=ListView3.Selected.SubItems.Count;
+      NewAvtoDriverId:=StrToInt(ListView3.Selected.SubItems.Strings[count-1]);
+      StaticText6.Caption:=ListView3.Selected.Caption+', '+ListView3.Selected.SubItems.Strings[0]+'  ';
+      ListView3.Visible:=false;
+   end;//if
+end;
+
+end.

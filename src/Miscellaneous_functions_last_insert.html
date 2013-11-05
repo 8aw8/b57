@@ -1,0 +1,572 @@
+<html><head>
+
+<title>MySQL.RU .:. Одобрено лучшими российскими программистами</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<link href="Miscellaneous_functions_last_insert_files/style.css" rel="stylesheet" type="text/css">
+<link rel="icon" href="http://www.mysql.ru/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://www.mysql.ru/favicon.ico" type="image/x-icon">
+
+</head><body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+<table wrap="" width="100%" border="0" cellpadding="0" cellspacing="0" height="92">
+  <tbody><tr> 
+    <td width="686" align="right" background="Miscellaneous_functions_last_insert_files/verh.jpg" height="92"><a href="http://www.mysql.ru/">&nbsp;</a></td>
+    <td align="right" background="Miscellaneous_functions_last_insert_files/verh_b.jpg">
+<!-- RLE code 56030 START -->
+<script language="JavaScript" type="text/javascript">
+<!--
+var RndNum4NoCash = Math.round(Math.random() * 1000000000);
+var ar_Tail='unknown'; if (document.referrer) ar_Tail = escape(document.referrer);
+document.write(
+'<iframe src="http://ad.adriver.ru/cgi-bin/erle.cgi'
++ '?sid=10834&bn=0&target=blank&bt=1&pz=0&tail256=' + ar_Tail + '&rnd=' + RndNum4NoCash
++ '" frameborder=0 vspace=0 hspace=0 width=468 height=60'
++ ' marginwidth=0 marginheight=0 scrolling=no></iframe>');
+// -->
+</script><iframe src="Miscellaneous_functions_last_insert_files/erle_002.gif" vspace="0" hspace="0" marginwidth="0" marginheight="0" width="468" frameborder="0" height="60" scrolling="no"></iframe>
+<noscript>
+<a href="http://ad.adriver.ru/cgi-bin/click.cgi?sid=10834&bn=0&bt=1&pz=0&rnd=1830793826" target=_blank>
+<img src="http://ad.adriver.ru/cgi-bin/rle.cgi?sid=10834&bn=0&bt=1&pz=0&rnd=1830793826" alt="-AdRiver-" border=0 width=468 height=60></a>
+</noscript>
+<!-- RLE code 56030 END -->
+<br>
+    </td>
+  </tr>
+</tbody></table>
+<table wrap="" width="100%" border="0" cellpadding="0" cellspacing="0" height="90%">
+  <tbody><tr> 
+    <td valign="top" width="157" background="Miscellaneous_functions_last_insert_files/lev_back.jpg">
+      <img src="Miscellaneous_functions_last_insert_files/lev_menu.jpg" width="155" height="28"><br>
+      <a href="http://www.mysql.ru/news" target="_top"><img src="Miscellaneous_functions_last_insert_files/a_news.jpg" alt="Новости" width="155" border="0" height="15"></a><br>
+      <a href="http://www.mysql.ru/docs" target="_top"><img src="Miscellaneous_functions_last_insert_files/a_documents.jpg" alt="Документация" width="155" border="0" height="19"></a><br>
+      <a href="http://www.mysql.ru/download" target="_top"><img src="Miscellaneous_functions_last_insert_files/a_download.jpg" alt="Download" width="155" border="0" height="19"></a><br>
+      <a href="http://www.mysql.ru/webboard" target="_top"><img src="Miscellaneous_functions_last_insert_files/a_webboard.jpg" alt="Webboard" width="155" border="0" height="19"></a><br>
+      <a href="http://www.mysql.ru/search.html" target="_top"><img src="Miscellaneous_functions_last_insert_files/a_searh.jpg" alt="Поиск" width="155" border="0" height="19"></a><br>
+      <a href="http://www.mysql.ru/faq" target="_top"><img src="Miscellaneous_functions_last_insert_files/a_faq.gif" alt="FAQ/ЧаВо" width="155" border="0" height="19"></a><br>
+      <a href="http://www.mysql.ru/feedback"><img src="Miscellaneous_functions_last_insert_files/a_mail.jpg" alt="Обратная связь" width="155" border="0" height="19"></a><br>
+      <br>
+      <br>
+      <br>
+    </td>
+    <td valign="top"> 
+      <table wrap="" width="96%" align="center" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr> 
+          <td valign="top" align="left" height="600">
+	    <br>
+	<!-- Start: center -->
+
+<table width="50%" bgcolor="#f8f8f8">
+<tbody><tr>
+	<td>
+
+	</td>
+</tr>
+</tbody></table>
+
+
+
+<center><h2>Справочное руководство по MySQL</h2><h5>6.3.6.2  Разные функции</h5></center>
+
+<div><ul><li><a href="http://www.mysql.ru/docs/man/Reference.html">6 Справочник по языку MySQL
+</a><ul><li><a href="http://www.mysql.ru/docs/man/Functions.html">6.3 Функции, используемые в операторах <code>SELECT</code> и <code>WHERE</code>
+</a><ul><li><a href="http://www.mysql.ru/docs/man/Other_Functions.html">6.3.6 Другие функции
+</a><ul><li><a href="http://www.mysql.ru/docs/man/Bit_functions.html">6.3.6.1 Битовые функции
+</a></li><li>6.3.6.2 Разные функции
+</li></ul></li></ul></li></ul></li></ul></div><ul>
+
+<div>
+<div><a rel="prev" href="http://www.mysql.ru/docs/man/Bit_functions.html" title="6.3.6.1  Битовые функции">Previous</a> / <a rel="next" href="http://www.mysql.ru/docs/man/Group_by_functions.html" title="6.3.7  Функции, используемые в операторах GROUP BY">Next</a> / <a rel="up" href="http://www.mysql.ru/docs/man/Other_Functions.html" title="6.3.6  Другие функции">Up</a> / <a rel="contents" href="http://www.mysql.ru/docs/man/index.html">Table of Contents</a></div><h4>6.3.6.2  Разные функции</h4>
+
+<dl compact="compact">
+
+<dt><code>DATABASE()</code>
+</dt><dd>
+Возвращает имя текущей базы данных:
+
+
+<pre>mysql&gt; SELECT DATABASE();
+        -&gt; 'test'
+</pre>
+
+Если в данное время нет активной базы данных, то функция <code>DATABASE()</code>
+возвращает пустую строку.
+
+</dd><dt><code>USER()</code>
+</dt><dd>
+</dd><dt><code>SYSTEM_USER()</code>
+</dt><dd>
+</dd><dt><code>SESSION_USER()</code>
+</dt><dd>
+Возвращает имя текущего активного пользователя MySQL:
+
+
+<pre>mysql&gt; SELECT USER();
+        -&gt; 'davida@localhost'
+</pre>
+
+В версии MySQL 3.22.11 или более поздней данная функция включает в себя
+имя хоста клиента, а также имя пользователя. Можно извлечь часть,
+касающуюся только имени пользователя, приведенным ниже способом
+(проверяется, включает ли данная величина имя хоста):
+
+
+<pre>mysql&gt; SELECT SUBSTRING_INDEX(USER(),"@",1);
+        -&gt; 'davida'
+</pre>
+
+</dd><dt><code>PASSWORD(str)</code>
+</dt><dd>
+Создает строку "пароля" из простого текста в аргументе <code>str</code>. Именно эта
+функция используется в целях шифрования паролей MySQL для хранения в
+столбце <code>Password</code> в таблице привилегий <code>user</code>:
+
+
+<pre>mysql&gt; SELECT PASSWORD('badpwd');
+        -&gt; '7f84554057dd964b'
+</pre>
+
+Шифрование, которое выполняет функция <code>PASSWORD()</code>, необратимо. Способ
+шифрования пароля, который используется функцией <code>PASSWORD()</code>, отличается от
+применяемого для шифрования паролей в Unix. Не следует ожидать, что, если
+пароли одинаковы для Unix и для MySQL, то функция <code>PASSWORD()</code> даст в
+результате то же зашифрованное значение, которое хранится в файле паролей
+Unix. См. описание функции <code>ENCRYPT()</code>.
+
+</dd><dt><code>ENCRYPT(str[,salt])</code>
+</dt><dd>
+Шифрует аргумент <code>str</code>, используя вызов системной функции кодирования
+<code>crypt()</code> из Unix. Аргумент <code>salt</code> должен быть строкой из двух символов (в
+версии MySQL 3.22.16 аргумент <code>salt</code> может содержать более двух символов):
+
+
+<pre>mysql&gt; SELECT ENCRYPT("hello");
+        -&gt; 'VxuFAJXVARROc'
+</pre>
+
+Если функция <code>crypt()</code> в данной операционной системе недоступна, функция
+<code>ENCRYPT()</code> всегда возвращает <code>NULL</code>. Функция  <code>ENCRYPT()</code> игнорирует все
+символы в аргументе <code>str</code>, за исключением первых восьми, по крайней мере в
+некоторых операционных системах - это определяется тем, как реализован
+системный вызов базовой функции <code>crypt()</code>.
+
+</dd><dt><code>ENCODE(str,pass_str)</code>
+</dt><dd>
+Шифрует  <code>str</code>, используя аргумент  <code>pass_str</code> как пароль. Для расшифровки
+результата следует использовать функцию <code>DECODE()</code>. Результат представляет
+собой двоичную строку той же длины, что и <code>string</code>. Для хранения результата
+в столбце следует использовать столбец типа <code>BLOB</code>.
+
+</dd><dt><code>DECODE(crypt_str,pass_str)</code>
+</dt><dd>
+Расшифровывает зашифрованную строку <code>crypt_str</code>, используя аргумент
+<code>pass_str</code> как пароль. Аргумент <code>crypt_str</code> должен быть строкой, возвращаемой
+функцией <code>ENCODE()</code>.
+
+</dd><dt><code>MD5(string)</code>
+</dt><dd>
+Вычисляет 128-битовую контрольную сумму <code>MD5</code> для аргумента <code>string</code>.
+Возвращаемая величина представляет собой 32-разрядное шестнадцатеричное
+число, которое может быть использовано, например, в качестве хеш-ключа:
+
+
+<pre>mysql&gt; SELECT MD5("testing");
+        -&gt; 'ae2b1fca515949e5d54fb22b8ed95575'
+</pre>
+
+Это "<code>RSA Data Security, Inc. MD5 Message-Digest Algorithm</code>".
+
+</dd><dt><code>SHA1(string)</code>
+</dt><dd>
+</dd><dt><code>SHA(string)</code>
+</dt><dd>
+Вычисляет 160-битовую контрольную сумму <code>SHA1</code> для аргумента <code>string</code>, как
+описано в RFC 3174 (Secure  Hash  Algorithm). Возвращаемая величина
+представляет собой 40-разрядное шестнадцатеричное число или <code>NULL</code> (в том
+случае, если входной аргумент был равен <code>NULL</code>). Одно из возможных
+применений для этой функции - в качестве хеш-ключа. Можно ее использовать
+и как криптографически безопасную функцию для сохранения паролей.
+
+
+<pre>mysql&gt; SELECT SHA1("abc");
+        -&gt; 'a9993e364706816aba3e25717850c26c9cd0d89d'
+</pre>
+
+Функция  <code>SHA1()</code> была добавлена в версии 4.0.2, и может рассматриваться как
+более защищенный криптографически эквивалент функции <code>MD5()</code>. <code>SHA()</code> является
+синонимом для функции <code>SHA1()</code>.
+
+</dd><dt><code>AES_ENCRYPT(string,key_string)</code>
+</dt><dd>
+</dd><dt><code>AES_DECRYPT(string,key_string)</code>
+</dt><dd>
+Эти функции позволяют шифровать/дешифровать данные, используя официальный
+алгоритм AES (Advanced  Encryption  Standard) (предыдущее название -
+Rijndael). В нем применяется кодирование с 128-битовым ключом, однако при
+помощи патча к исходному коду длину ключа можно увеличить до 256 битов. В
+MySQL выбран 128-битовый ключ, поскольку он работает намного быстрее и
+обычно обеспечивает вполне достаточную защищенность. Входные аргументы
+могут быть любой длины. Если один из аргументов равен <code>NULL</code>, то результат
+этой функции также будет иметь значение <code>NULL</code>. Так как AES является
+алгоритмом блочного уровня, то для декодирования используется дополнение
+строк нечетной длины, так, чтобы длина результирующей строки могла
+вычисляться как выражение <code>16*(trunc(длина_строки/16)+1)</code>. Если строка имеет
+некорректную длину или содержит неверные данные для этого ключа, то
+функция <code>AES_DECRYPT()</code> вернет <code>NULL</code>, поэтому на эту функцию особо полагаться
+не стоит. <code>AES_DECRYPT()</code> имеет также модификацию, возвращающую величину со
+значением, не равным <code>NULL</code>, даже при неправильном ключе. Функции AES можно
+использовать для хранения данных в зашифрованном виде путем модификации
+запросов:
+
+
+<pre>INSERT INTO t VALUES (1,AES_ENCRYPT("text","password"));
+</pre>
+
+Можно добиться еще более высокого уровня защищенности за счет исключения
+передачи ключа через соединение для каждого запроса - для этого ключ на
+время соединения должен сохраняться в переменной на сервере:
+
+
+<pre>SELECT @password:="my password";
+INSERT INTO t VALUES (1,AES_ENCRYPT("text",@password));
+</pre>
+
+Функции  <code>AES_ENCRYPT()</code> и <code>AES_DECRYPT()</code> были добавлены в версию 4.0.2 и
+могут рассматриваться как наиболее криптографически защищенные шифрующие
+функции, в настоящее время доступные в MySQL.
+
+</dd><dt><code>DES_ENCRYPT(string_to_encrypt [, (key_number | key_string) ] )</code>
+</dt><dd>
+Шифрует строку с заданным ключом, используя алгоритм DES. Следует
+учитывать, что эта функция работает только тогда, когда конфигурация MySQL
+поддерживает SSL. See section <a href="http://www.mysql.ru/docs/man/Secure_connections.html">4.3.9  Использование безопасных соединений</a>. Ключ для
+использования при шифровании выбирается следующим образом:
+
+<table width="100%" border="1">
+<tbody><tr><td><strong>Аргумент</strong> </td><td> <strong>Описание</strong>
+</td></tr>
+<tr><td>Только один аргумент </td><td> Используется первый ключ из <code>des-key-file</code>
+</td></tr>
+<tr><td>Номер ключа </td><td> Используется заданный ключ (0-9) из <code>des-key-file</code>
+</td></tr>
+<tr><td>Строка </td><td> Для шифрования <code>string_to_encrypt</code> может использоваться ключ, заданный в <code>key_string</code>
+</td></tr>
+</tbody></table>
+
+Функция возвращает двоичную строку, в которой первый символ будет 
+<code>CHAR(128 | key_number)</code>. Число <code>128</code> добавлено для упрощения распознавания
+зашифрованного ключа. При использовании строкового ключа <code>key_number</code> будет
+равен <code>127</code>. При ошибке эта функция возвращает <code>NULL</code>. Длина строки в
+результате будет равна <code>new_length=org_length + (8-(org_length % 8))+1</code>.
+Выражение <code>des-key-file</code> имеет следующий форматt:
+
+
+<pre>key_number des_key_string
+key_number des_key_string
+</pre>
+
+Каждый элемент <code>key_number</code> должен быть числом от 0 до 9. Строки в данном
+файле могут располагаться в произвольном порядке. Выражение <code>des_key_string</code>
+представляет собой строку, которая будет использована при шифровании
+сообщения. Между числом и ключом должен быть по крайней мере один пробел.
+Первый ключ используется по умолчанию, если не задан какой-либо аргумент
+ключа в функции <code>DES_ENCRYPT()</code>. Существует возможность послать MySQL запрос
+на чтение новых значений ключей из файла ключей при помощи команды <code>FLUSH 
+DES_KEY_FILE</code>. Эта операция требует наличия привилегии <code>Reload_priv</code>. Одно из
+преимуществ наличия набора ключей по умолчанию состоит в том, что
+приложения могут проверять существование зашифрованных величин в столбцах
+без предоставления конечному пользователю права расшифровки этих величин.
+
+
+<pre>mysql&gt; SELECT customer_address FROM customer_table WHERE
+        crypted_credit_card = DES_ENCRYPT("credit_card_number");
+</pre>
+
+</dd><dt><code>DES_DECRYPT(string_to_decrypt [, key_string])</code>
+</dt><dd>
+Дешифрует строку, зашифрованную с помощью функции <code>DES_ENCRYPT()</code>. Следует
+учитывать, что эта функция работает только тогда, когда конфигурация MySQL
+поддерживает SSL. See section <a href="http://www.mysql.ru/docs/man/Secure_connections.html">4.3.9  Использование безопасных соединений</a>. Если аргумент
+<code>key_string</code> не задан, то функция <code>DES_DECRYPT()</code> проверяет первый байт
+зашифрованной строки для определения номера ключа алгоритма DES,
+использованного для шифрования исходной строки, Затем читает ключ из
+<code>des-key-file</code> для расшифровки сообщения. Чтобы выполнить это, пользователь
+должен обладать привилегией <code>SUPER</code>. При указании значения аргумента в
+<code>key_string</code> эта строка используется как ключ для дешифровки сообщения. Если
+строка <code>string_to_decrypt</code> не выглядит как зашифрованная, то MySQL вернет
+заданную строку <code>string_to_decrypt</code>. При ошибке эта функция возвращает <code>NULL</code>.
+
+</dd><dt><code>LAST_INSERT_ID([expr])</code>
+</dt><dd>
+Возвращает последнюю автоматически сгенерированную величину, которая была
+внесена в столбец <code>AUTO_INCREMENT</code>. See section <a href="http://www.mysql.ru/docs/man/mysql_insert_id.html">8.4.3.126  <code>mysql_insert_id()</code></a>.
+
+
+<pre>mysql&gt; SELECT LAST_INSERT_ID();
+        -&gt; 195
+</pre>
+
+Значение последнего сгенерированного <code>ID</code> сохраняется на сервере для данного
+конкретного соединения и не будет изменено другим клиентом. Оно не будет
+изменено даже при обновлении другого столбца <code>AUTO_INCREMENT</code> конкретной
+величиной (то есть, которая не равна <code>NULL</code> и не равна <code>0</code>). При внесении
+большого количества строк с помощью одной команды <code>INSERT</code> функция
+<code>LAST_INSERT_ID()</code> возвращает значение для первой внесенной строки. Причина
+этого заключается в том, что можно легко воспроизвести точно такую же
+команду <code>INSERT</code> на другом сервере.
+
+Если задано значение аргумента <code>expr</code> в функции <code>LAST_INSERT_ID()</code>, то
+величина аргумента возвращается функцией и устанавливается в качестве
+следующего значения, которое будет возвращено функцией <code>LAST_INSERT_ID()</code>.
+Это можно использовать для моделирования последовательностей: 
+
+Вначале создается таблица:
+
+
+<pre>mysql&gt; CREATE TABLE sequence (id INT NOT NULL);
+mysql&gt; INSERT INTO sequence VALUES (0);
+</pre>
+
+Затем данную таблицу можно использовать для генерации чисел
+последовательности как показано ниже:
+
+
+<pre>mysql&gt; UPDATE sequence SET id=LAST_INSERT_ID(id+1);
+</pre>
+
+Можно генерировать последовательности без вызова <code>LAST_INSERT_ID()</code>:
+полезность применения данной функции состоит в том, что данное значение <code>ID</code>
+поддерживается на сервере как последняя автоматически сгенерированная
+величина (защищенная от других пользователей), и вы можете извлекать новый
+<code>ID</code> так же, как и любое другое нормальное значение <code>AUTO_INCREMENT</code> в MySQL.
+Например, функция <code>LAST_INSERT_ID()</code> (без аргумента) возвратит новое
+значение <code>ID</code>. Функцию C  API  <code>mysql_insert_id()</code> также можно использовать
+для получения этой величины. Следует учитывать, что, поскольку функция
+<code>mysql_insert_id()</code> обновляется только после команд <code>INSERT</code> и <code>UPDATE</code>, то
+нельзя использовать эту функцию C  API для извлечения значения <code>ID</code> для
+<code>LAST_INSERT_ID(expr)</code> после выполнения других команд SQL, таких как <code>SELECT</code>
+или <code>SET</code>.
+
+</dd><dt><code>FORMAT(X,D)</code>
+</dt><dd>
+Форматирует число <code>X</code> в формат вида <code>'#,###,###.##'</code> с округлением до <code>D</code>
+десятичных знаков. Если <code>D</code> равно <code>0</code>, результат будет представлен без
+десятичной точки или дробной части:
+
+
+<pre>mysql&gt; SELECT FORMAT(12332.123456, 4);
+        -&gt; '12,332.1235'
+
+mysql&gt; SELECT FORMAT(12332.1,4);
+        -&gt; '12,332.1000'
+
+mysql&gt; SELECT FORMAT(12332.2,0);
+        -&gt; '12,332'
+</pre>
+
+</dd><dt><code>VERSION()</code>
+</dt><dd>
+Возвращает строку с номером версии сервера MySQL:
+
+
+<pre>mysql&gt; SELECT VERSION();
+        -&gt; '3.23.13-log'
+</pre>
+
+Следует учитывать, что если данная версия заканчивается с <code>-log</code>, то это
+означает, что включено ведение журналов.
+
+</dd><dt><code>CONNECTION_ID()</code>
+</dt><dd>
+Возвращает идентификатор (<code>thread_id</code>) для данного соединения. Каждое
+соединение имеет свой собственный уникальный идентификатор:
+
+
+<pre>mysql&gt; SELECT CONNECTION_ID();
+        -&gt; 1
+</pre>
+
+</dd><dt><code>GET_LOCK(str,timeout)</code>
+</dt><dd>
+Пытается осуществить блокировку по имени, которое заданно в строке <code>str</code>, с
+временем ожидания в секундах, указанном в аргументе <code>timeout</code>. Возвращает <code>1</code>,
+если блокировка осуществлена успешно, <code>0</code> - если закончилось время
+ожидания для данной попытки, или <code>NULL</code>, если возникла ошибка (такая как
+отсутствие свободной памяти или уничтожение потока командой <code>mysqladmin kill</code>).
+
+Блокировка снимается при выполнении команды <code>RELEASE_LOCK()</code>, запуске новой
+команды <code>GET_LOCK()</code> или при завершении данного потока. Эту функцию можно
+использовать для осуществления блокировок уровня приложения или для
+моделирования блокировки записи. Функция блокирует запросы других клиентов
+на блокировку с тем же именем; клиенты, которые используют согласованные
+имена блокировок, могут применять эту функцию для выполнения совместного
+упредительного блокирования:
+
+
+<pre>mysql&gt; SELECT GET_LOCK("lock1",10);
+        -&gt; 1
+
+mysql&gt; SELECT GET_LOCK("lock2",10);
+        -&gt; 1
+
+mysql&gt; SELECT RELEASE_LOCK("lock2");
+        -&gt; 1
+
+mysql&gt; SELECT RELEASE_LOCK("lock1");
+        -&gt; NULL
+</pre>
+
+Обратите внимание: повторный вызов функции <code>RELEASE_LOCK()</code> возвращает <code>NULL</code>,
+поскольку блокировка <code>lock1</code> была автоматически выполнена вторым вызовом
+функции <code>GET_LOCK()</code>.
+
+</dd><dt><code>RELEASE_LOCK(str)</code>
+</dt><dd>
+Снимает блокировку, указанную в строке <code>str</code>, полученной от функции
+<code>GET_LOCK()</code>. Возвращает <code>1</code> если блокировка была снята, <code>0</code> - если такая
+блокировка уже поставлена в другом соединении (в этом случае блокировка не
+снимается) и <code>NULL</code>, если блокировки с указанным именем не существует.
+Последнее может произойти в случае, когда вызов функции <code>GET_LOCK()</code> не
+привел к успешному результату или данная блокировка уже снята. Функцию
+<code>RELEASE_LOCK()</code> удобно использовать совместно с командой <code>DO</code>. 
+See section <a href="http://www.mysql.ru/docs/man/DO.html">6.4.10  Синтаксис оператора <code>DO</code></a>.
+
+</dd><dt><code>BENCHMARK(count,expr)</code>
+</dt><dd>
+Функция <code>BENCHMARK()</code> повторяет выполнение выражения <code>expr</code> заданное
+количество раз, указанное в аргументе <code>count</code>. Она может использоваться для
+определения того, насколько быстро MySQL обрабатывает данное выражение.
+Значение результата всегда равно <code>0</code>. Функция предназначена для
+использования в клиенте <code>mysql</code>, который сообщает о времени выполнения
+запроса:
+
+
+<pre>mysql&gt; SELECT BENCHMARK(1000000,ENCODE("hello","goodbye"));
++----------------------------------------------+
+| BENCHMARK(1000000,ENCODE("hello","goodbye")) |
++----------------------------------------------+
+|                                            0 |
++----------------------------------------------+
+1 row in set (4.74 sec)
+</pre>
+
+Указанное в отчете время представляет собой время, подсчитанное на стороне
+клиента, а не время, затраченное центральным процессором (CPU time) на
+сервере. Может оказаться целесообразным выполнить <code>BENCHMARK()</code> несколько
+раз, чтобы выяснить, насколько интенсивно загружен серверный компьютер.
+
+</dd><dt><code>INET_NTOA(expr)</code>
+</dt><dd>
+По заданному числовому адресу сети (4 или 8 байтов) возвращает
+представление указанного адреса в виде разделенных точками четырех октетов
+в виде строки:
+
+
+<pre>mysql&gt; SELECT INET_NTOA(3520061480);
+        -&gt; "209.207.224.40"
+</pre>
+
+</dd><dt><code>INET_ATON(expr)</code>
+</dt><dd>
+По заданному представлению сетевого адреса в виде строки, содержащей
+разделенные точками четыре октета, функция возвращает целое число,
+представляющее собой числовое значение данного адреса. Адреса могут быть
+длиной 4 или 8 байтов:
+
+
+<pre>mysql&gt; SELECT INET_ATON("209.207.224.40");
+        -&gt; 3520061480
+</pre>
+
+Результирующее число всегда генерируется в соответствии с порядком
+расположения октетов в сетевом адресе, например вышеприведенное число
+вычисляется как <code>209*256^3 + 207*256^2 + 224*256 +40</code>.
+
+</dd><dt><code>MASTER_POS_WAIT(log_name, log_pos)</code>
+</dt><dd>
+Блокируется, пока подчиненный сервер не достигнет определенной точки
+положения в журнале репликации головного сервера. Если информация
+головного сервера не инициализирована, то функция возвращает <code>NULL</code>. Если
+подчиненный сервер не работает, то функция блокируется и ожидает, пока
+сервер запустится и дойдет до указанной позиции или пройдет через нее.
+Если подчиненный сервер уже прошел указанную точку, то функция немедленно
+возвращает результат. Возвращаемая величина представляет собой число
+событий в журнале, которые функция должна была ``переждать'', пока сервер
+дойдет до указанной точки, или <code>NULL</code> в случае ошибки. Функция полезна для
+контроля совместной работы головного и подчиненного серверов, но
+первоначально была написана с целью упрощения тестирования процесса
+репликации.
+
+</dd><dt><code>FOUND_ROWS()</code>
+</dt><dd>
+Возвращает количество строк, которые возвратила бы последняя команда
+<code>SELECT SQL_CALC_FOUND_ROWS ...</code> при отсутствии ограничения оператором
+<code>LIMIT</code>.
+
+
+<pre>mysql&gt; SELECT SQL_CALC_FOUND_ROWS * FROM tbl_name WHERE id &gt; 100 LIMIT 10;
+mysql&gt; SELECT FOUND_ROWS();
+</pre>
+
+Второй вызов команды <code>SELECT</code> возвратит количество строк, которые возвратила
+бы первая команда SELECT, если бы она была написана без выражения <code>LIMIT</code>.
+Отметим, что, хотя при использовании команды <code>SELECT SQL_CALC_FOUND_ROWS
+...</code>, MySQL должен пересчитать все строки в наборе результатов, этот способ
+все равно быстрее, чем без <code>LIMIT</code>, так как не требуется посылать результат
+клиенту.
+</dd></dl>
+
+
+
+
+<br><div><a href="http://www.mysql.ru/docs/man/Miscellaneous_functions.html#">Top</a> / <a rel="prev" href="http://www.mysql.ru/docs/man/Bit_functions.html" title="6.3.6.1  Битовые функции">Previous</a> / <a rel="next" href="http://www.mysql.ru/docs/man/Group_by_functions.html" title="6.3.7  Функции, используемые в операторах GROUP BY">Next</a> / <a rel="up" href="http://www.mysql.ru/docs/man/Other_Functions.html" title="6.3.6  Другие функции">Up</a> / <a rel="contents" href="http://www.mysql.ru/docs/man/index.html">Table of Contents</a></div></div>
+</ul>
+<center><form action="http://www.mysql.ru/search" method="get">
+Поиск по документации:
+<input name="b" value="1" type="hidden">
+<input name="terms" size="20" type="text">
+<input value="Поехали!" type="submit">
+</form></center>
+
+
+<br><br>
+<!--//
+<p align="center">
+<a href="http://www.inside.ru/?referer1=reklama&referer2=mysql-1" title="Создание сайтов">Создание сайтов</a> и
+<a href="http://www.inside.ru/?referer1=reklama&referer2=mysql-2" title="Разработка сайтов">Разработка сайтов</a>
+</p>
+//-->
+
+<br>
+<table width="90%" align="center" cellpadding="2" cellspacing="2">
+<tbody><tr align="center" bgcolor="#f0f0f0">
+	<td><a href="http://www.mysql.ru/feedback/?reklama"><b>РЕКЛАМА НА САЙТЕ</b></a></td>
+</tr>
+<tr align="center" bgcolor="#fbfbfb">
+	<td>
+&nbsp;
+<font size="-2">
+
+ | 
+</font>
+	</td>
+</tr>
+</tbody></table>
+
+
+
+	<!-- Stop: center -->
+            <br>
+          </td>
+        </tr>
+      </tbody></table>
+    </td>
+  </tr>
+</tbody></table>
+<table wrap="" width="100%" background="Miscellaneous_functions_last_insert_files/niz_c.jpg" border="0" cellpadding="0" cellspacing="0" height="47">
+  <tbody><tr> 
+    <td> <img src="Miscellaneous_functions_last_insert_files/niz_a.jpg" width="247" height="47"><a href="http://www.inside.ru/"><img src="Miscellaneous_functions_last_insert_files/niz_logo.jpg" width="113" border="0" height="47"></a><img src="Miscellaneous_functions_last_insert_files/niz_b.jpg" width="211" height="47"> 
+  </td></tr>
+  <tr>
+    <td>
+  </td></tr>
+</tbody></table>
+</body></html>

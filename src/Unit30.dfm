@@ -1,0 +1,147 @@
+object Form30_logistic: TForm30_logistic
+  Left = 702
+  Top = 491
+  Width = 509
+  Height = 494
+  Caption = #1051#1086#1075#1080#1089#1090#1080#1082#1072
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnActivate = FormActivate
+  OnDeactivate = FormDeactivate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object SpeedButton1: TSpeedButton
+    Left = 80
+    Top = 8
+    Width = 23
+    Height = 22
+    OnClick = SpeedButton1Click
+  end
+  object SpeedButton2: TSpeedButton
+    Left = 80
+    Top = 40
+    Width = 23
+    Height = 22
+    OnClick = SpeedButton2Click
+  end
+  object SpeedButton3: TSpeedButton
+    Left = 80
+    Top = 72
+    Width = 23
+    Height = 22
+    OnClick = SpeedButton3Click
+  end
+  object StaticText6: TStaticText
+    Left = 112
+    Top = 72
+    Width = 76
+    Height = 17
+    BevelKind = bkSoft
+    Caption = #1053#1077' '#1074#1099#1073#1088#1072#1085'  '
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 8
+  end
+  object StaticText5: TStaticText
+    Left = 112
+    Top = 40
+    Width = 76
+    Height = 17
+    BevelKind = bkSoft
+    Caption = #1053#1077' '#1074#1099#1073#1088#1072#1085'  '
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 7
+  end
+  object StaticText4: TStaticText
+    Left = 112
+    Top = 8
+    Width = 76
+    Height = 17
+    BevelKind = bkSoft
+    Caption = #1053#1077' '#1074#1099#1073#1088#1072#1085'  '
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 6
+  end
+  object StaticText1: TStaticText
+    Left = 8
+    Top = 40
+    Width = 66
+    Height = 17
+    Caption = #1040#1074#1090#1086#1084#1086#1073#1080#1083#1100
+    TabOrder = 0
+  end
+  object StaticText2: TStaticText
+    Left = 8
+    Top = 8
+    Width = 59
+    Height = 17
+    Caption = #1044#1080#1089#1087#1077#1090#1095#1077#1088
+    TabOrder = 1
+  end
+  object StaticText3: TStaticText
+    Left = 8
+    Top = 72
+    Width = 52
+    Height = 17
+    Caption = #1042#1086#1076#1080#1090#1077#1083#1100
+    TabOrder = 2
+  end
+  object ListView1: TListView
+    Left = 24
+    Top = 128
+    Width = 393
+    Height = 161
+    Columns = <>
+    ReadOnly = True
+    RowSelect = True
+    TabOrder = 3
+    ViewStyle = vsReport
+    Visible = False
+    OnDblClick = ListView1DblClick
+  end
+  object ListView2: TListView
+    Left = 48
+    Top = 144
+    Width = 385
+    Height = 169
+    Columns = <>
+    ReadOnly = True
+    RowSelect = True
+    TabOrder = 4
+    ViewStyle = vsReport
+    Visible = False
+    OnDblClick = ListView2DblClick
+  end
+  object ListView3: TListView
+    Left = 72
+    Top = 168
+    Width = 393
+    Height = 161
+    Columns = <>
+    ReadOnly = True
+    RowSelect = True
+    TabOrder = 5
+    ViewStyle = vsReport
+    Visible = False
+    OnDblClick = ListView3DblClick
+  end
+end

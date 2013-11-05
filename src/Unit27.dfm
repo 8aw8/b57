@@ -1,0 +1,131 @@
+object Form27_avto_upd: TForm27_avto_upd
+  Left = 819
+  Top = 423
+  Width = 357
+  Height = 220
+  Caption = #1040#1074#1090#1086#1084#1086#1073#1080#1083#1100
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnActivate = FormActivate
+  OnDeactivate = FormDeactivate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 96
+    Top = 16
+    Width = 55
+    Height = 13
+    Caption = #1053#1077' '#1074#1099#1073#1088#1072#1085
+  end
+  object Edit2: TEdit
+    Left = 96
+    Top = 64
+    Width = 121
+    Height = 21
+    TabOrder = 10
+  end
+  object Edit1: TEdit
+    Left = 96
+    Top = 40
+    Width = 241
+    Height = 21
+    TabOrder = 0
+  end
+  object Edit3: TEdit
+    Left = 96
+    Top = 88
+    Width = 169
+    Height = 21
+    TabOrder = 1
+    Text = '0.0'
+    OnChange = Edit3Change
+  end
+  object CheckBox1: TCheckBox
+    Left = 8
+    Top = 112
+    Width = 105
+    Height = 17
+    Alignment = taLeftJustify
+    Caption = #1055#1077#1088#1077#1075#1088#1091#1079
+    TabOrder = 2
+  end
+  object StaticText1: TStaticText
+    Left = 8
+    Top = 40
+    Width = 87
+    Height = 17
+    Caption = #1041#1086#1088#1090#1086#1074#1086#1081' '#1085#1086#1084#1077#1088
+    TabOrder = 3
+  end
+  object StaticText2: TStaticText
+    Left = 8
+    Top = 64
+    Width = 43
+    Height = 17
+    Caption = #1052#1086#1076#1077#1083#1100
+    TabOrder = 4
+  end
+  object StaticText3: TStaticText
+    Left = 8
+    Top = 88
+    Width = 37
+    Height = 17
+    Caption = #1058#1086#1085#1072#1078
+    TabOrder = 5
+  end
+  object Button2: TButton
+    Left = 128
+    Top = 144
+    Width = 89
+    Height = 25
+    Caption = #1054#1090#1084#1077#1085#1072
+    TabOrder = 6
+    OnClick = Button2Click
+  end
+  object Button1: TButton
+    Left = 16
+    Top = 144
+    Width = 89
+    Height = 25
+    Caption = #1054#1082
+    TabOrder = 7
+    OnClick = Button1Click
+  end
+  object Button4: TButton
+    Left = 8
+    Top = 8
+    Width = 75
+    Height = 25
+    Caption = #1042#1083#1072#1076#1077#1083#1077#1094
+    TabOrder = 8
+    OnClick = Button4Click
+  end
+  object Panel1: TPanel
+    Left = 8
+    Top = -120
+    Width = 297
+    Height = 129
+    BevelInner = bvLowered
+    Caption = 'Panel1'
+    TabOrder = 9
+    Visible = False
+    object ListView1: TListView
+      Left = 2
+      Top = 2
+      Width = 293
+      Height = 119
+      Align = alTop
+      Columns = <>
+      ReadOnly = True
+      RowSelect = True
+      TabOrder = 0
+      ViewStyle = vsReport
+      OnDblClick = ListView1DblClick
+    end
+  end
+end
